@@ -33,6 +33,42 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+```module up_counter (out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+	if(!rst)
+		out<=0;
+	else 
+		out <= out+1;
+end
+endmodule
+```
+Down counter
+```
+module down_counter (out,clk,rst);
+
+input clk,rst; 
+
+output reg [3:0]out;
+
+always @ (posedge clk)
+
+begin
+
+if(!rst)
+
+out<=4'b1111;
+
+else 
+
+out <= out-1;
+
+end
+
+endmodule
+````
 
 Developed by:Lavanya R 
 RegisterNumber:25017651
